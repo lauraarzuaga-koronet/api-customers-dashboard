@@ -410,8 +410,10 @@ function initSegments(){
 function getAllFlat(){
   if(_allFlat)return _allFlat;
   var arr=[];
+  // Preserve the per-segment order (already sorted by vol_2026 desc in data)
+  // then sort the combined list by vol_2026 desc
   Object.values(D.seg_customers).forEach(function(sub){sub.forEach(function(c){arr.push(c);});});
-  arr.sort(function(a,b){return (b.vol_2025||0)-(a.vol_2025||0);});
+  arr.sort(function(a,b){return (b.vol_2026||0)-(a.vol_2026||0);});
   _allFlat=arr;return arr;
 }
 function initCustomers(){switchSegTab(0);}
