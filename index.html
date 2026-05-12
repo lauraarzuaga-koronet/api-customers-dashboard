@@ -83,7 +83,7 @@ em.num{font-style:normal;font-family:'DM Mono',monospace;color:var(--accent)}
 </head>
 <body>
 <h1>API Customers &#8212; All Customers</h1>
-<p class="subtitle">12,975 IDs &middot; 12,725 grupos/cuentas &middot; Segmentaci&#243;n por vol 2025 &middot; Ene 2022 &#8211; May 2026</p>
+<p class="subtitle">12,975 IDs &middot; 12,725 grupos/cuentas &middot; Segmentaci&#243;n por vol 2025 &middot; Ranking por GMV 2026 YTD &middot; Ene 2022 &#8211; May 2026</p>
 
 <div class="tab-bar">
   <button class="tab active" onclick="showTab('overview')">Visi&#243;n general</button>
@@ -446,7 +446,7 @@ function renderCustTable(tabIdx,q){
 
   var subNote=isMicro&&!qLow?'top 500 de 11,739':qLow?'resultado busqueda':'en segmento';
   var searchNote=qLow?(shown+' resultado'+(shown!==1?'s':'')+' para "'+q+'"')
-    :(isMicro?'Mostrando top 500 por GMV hist\u00f3rico \u00b7 Usa el buscador para los 11,739 restantes':shown.toLocaleString()+' grupos y cuentas');
+    :(isMicro?'Mostrando top 500 por GMV hist\u00f3rico \u00b7 Usa el buscador para los 11,739 restantes':shown.toLocaleString()+' grupos y cuentas \u00b7 ordenados por GMV 2026 YTD \u25bc');
 
   var content=document.getElementById('seg-tab-content');
   content.innerHTML='<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1rem;">'
